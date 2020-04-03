@@ -1,6 +1,9 @@
 {
   "name": "clothingshop",
   "version": "0.1.0",
+  "engines": {
+    
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

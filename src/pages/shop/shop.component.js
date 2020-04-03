@@ -7,6 +7,8 @@ import { createStructuredSelector } from 'reselect';
 import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions';
 import { selectIsCollectionsLoaded } from '../../redux/shop/shop.selectors';
 import WithSpinner from '../../components/with-spinner/with-spinner.component';
+import { Container } from './shop.styles';
+
 
 const CollectionOverviewWithSpinner = WithSpinner(CollectionOverview);
 const CollectionPageWithSpinner = WithSpinner(CollectionPage);
@@ -19,10 +21,10 @@ class ShopPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <Container>
                 <Route exact path={`${this.props.match.path}`} render={(props) => <CollectionOverviewWithSpinner isLoading={!this.props.isCollectionsLoaded} {...props}/>}/>
                 <Route exact path={`${this.props.match.path}/:categoryId`} render={(props) => <CollectionPageWithSpinner isLoading={!this.props.isCollectionsLoaded} {...props}/>}/>
-            </div>
+            </Container>
         )
     }
 }

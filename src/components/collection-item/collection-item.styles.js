@@ -31,8 +31,9 @@ export const CollectionItemContainer = styled.div`
     }
 
     @media screen and (max-width: 800px) {
-        width: 40vw;
-  
+        width: 90vw;
+        margin: 10px 0;
+
         &:hover {
           button {
             opacity: unset;

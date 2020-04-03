@@ -4,6 +4,11 @@ export const SignUpContainer = styled.div`
     width : 380px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 940px) {
+        width: 100%;
+        justify-content: center;
+    }
 `;
 
 export const Title = styled.h2``;
